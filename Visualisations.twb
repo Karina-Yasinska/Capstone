@@ -1,0 +1,1583 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20252.25.0818.1050                               -->
+<workbook original-version='18.1' source-build='2025.2.2 (20252.25.0818.1050)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Avg_Ride_Length+' inline='true' name='federated.1ru33wq1s7b34t1alzmj50vrra8r' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Avg_Ride_Length' name='textscan.02owquh0jhsoyp19b18180sfufkx'>
+            <connection class='textscan' directory='D:/Проєкт' filename='Avg_Ride_Length.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='textscan.02owquh0jhsoyp19b18180sfufkx' name='Avg_Ride_Length_By Day_Of_Week.csv' table='[Avg_Ride_Length_By Day_Of_Week#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='ru_RU' separator=';'>
+              <column datatype='integer' name='day_of_week' ordinal='0' />
+              <column datatype='string' name='member_casual' ordinal='1' />
+              <column datatype='datetime' name='Avg_Ride_Length_By Day_Of_Week' ordinal='2' />
+            </columns>
+          </relation>
+          <relation connection='textscan.02owquh0jhsoyp19b18180sfufkx' name='Avg_Ride_Length.csv' table='[Avg_Ride_Length#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='ru_RU' separator=';'>
+              <column datatype='string' name='member_casual' ordinal='0' />
+              <column datatype='datetime' name='Avg_Ride_Length' ordinal='1' />
+            </columns>
+          </relation>
+          <relation connection='textscan.02owquh0jhsoyp19b18180sfufkx' name='Rides_by_day_of_week.csv' table='[Rides_by_day_of_week#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='ru_RU' separator=';'>
+              <column datatype='string' name='member_casual' ordinal='0' />
+              <column datatype='integer' name='day_of_week' ordinal='1' />
+              <column datatype='integer' name='Rides_by_day_of_week ' ordinal='2' />
+            </columns>
+          </relation>
+          <relation connection='textscan.02owquh0jhsoyp19b18180sfufkx' name='Total_Rides.csv' table='[Total_Rides#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='ru_RU' separator=';'>
+              <column datatype='string' name='member_casual' ordinal='0' />
+              <column datatype='integer' name='Total_Rides' ordinal='1' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[Avg_Ride_Length]' value='[Avg_Ride_Length.csv].[Avg_Ride_Length]' />
+          <map key='[Avg_Ride_Length_By Day_Of_Week]' value='[Avg_Ride_Length_By Day_Of_Week.csv].[Avg_Ride_Length_By Day_Of_Week]' />
+          <map key='[Rides_by_day_of_week ]' value='[Rides_by_day_of_week.csv].[Rides_by_day_of_week ]' />
+          <map key='[Total_Rides]' value='[Total_Rides.csv].[Total_Rides]' />
+          <map key='[day_of_week (Avg_Ride_Length_By Day_Of_Week.csv)]' value='[Avg_Ride_Length_By Day_Of_Week.csv].[day_of_week]' />
+          <map key='[day_of_week]' value='[Rides_by_day_of_week.csv].[day_of_week]' />
+          <map key='[member_casual (Avg_Ride_Length_By Day_Of_Week.csv)]' value='[Avg_Ride_Length_By Day_Of_Week.csv].[member_casual]' />
+          <map key='[member_casual (Rides_by_day_of_week.csv)]' value='[Rides_by_day_of_week.csv].[member_casual]' />
+          <map key='[member_casual (Total_Rides.csv)]' value='[Total_Rides.csv].[member_casual]' />
+          <map key='[member_casual]' value='[Avg_Ride_Length.csv].[member_casual]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Avg_Ride_Length_By Day_Of_Week.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;ru&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₽&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;ru_RU&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot; &quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Avg_Ride_Length.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;ru&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₽&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;ru_RU&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot; &quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Rides_by_day_of_week.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;ru&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₽&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;ru_RU&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot; &quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Total_Rides.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;ru&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₽&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;ru_RU&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot; &quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day_of_week</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[day_of_week (Avg_Ride_Length_By Day_Of_Week.csv)]</local-name>
+            <parent-name>[Avg_Ride_Length_By Day_Of_Week.csv]</parent-name>
+            <remote-alias>day_of_week</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Avg_Ride_Length_By Day_Of_Week.csv_FD7240B8F0DC4086A52D12BF9DD822D6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>member_casual</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[member_casual (Avg_Ride_Length_By Day_Of_Week.csv)]</local-name>
+            <parent-name>[Avg_Ride_Length_By Day_Of_Week.csv]</parent-name>
+            <remote-alias>member_casual</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LRU_RRU' />
+            <object-id>[Avg_Ride_Length_By Day_Of_Week.csv_FD7240B8F0DC4086A52D12BF9DD822D6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Avg_Ride_Length_By Day_Of_Week</remote-name>
+            <remote-type>134</remote-type>
+            <local-name>[Avg_Ride_Length_By Day_Of_Week]</local-name>
+            <parent-name>[Avg_Ride_Length_By Day_Of_Week.csv]</parent-name>
+            <remote-alias>Avg_Ride_Length_By Day_Of_Week</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Hour</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Avg_Ride_Length_By Day_Of_Week.csv_FD7240B8F0DC4086A52D12BF9DD822D6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>member_casual</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[member_casual]</local-name>
+            <parent-name>[Avg_Ride_Length.csv]</parent-name>
+            <remote-alias>member_casual</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LRU_RRU' />
+            <object-id>[Avg_Ride_Length.csv_12A3622101DF4CC98E29B342E7D8A548]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Avg_Ride_Length</remote-name>
+            <remote-type>134</remote-type>
+            <local-name>[Avg_Ride_Length]</local-name>
+            <parent-name>[Avg_Ride_Length.csv]</parent-name>
+            <remote-alias>Avg_Ride_Length</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Hour</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Avg_Ride_Length.csv_12A3622101DF4CC98E29B342E7D8A548]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>member_casual</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[member_casual (Rides_by_day_of_week.csv)]</local-name>
+            <parent-name>[Rides_by_day_of_week.csv]</parent-name>
+            <remote-alias>member_casual</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LRU_RRU' />
+            <object-id>[Rides_by_day_of_week.csv_8ACB80B0A6084B8F8A3ED57B0D2EB629]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day_of_week</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[day_of_week]</local-name>
+            <parent-name>[Rides_by_day_of_week.csv]</parent-name>
+            <remote-alias>day_of_week</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Rides_by_day_of_week.csv_8ACB80B0A6084B8F8A3ED57B0D2EB629]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rides_by_day_of_week </remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Rides_by_day_of_week ]</local-name>
+            <parent-name>[Rides_by_day_of_week.csv]</parent-name>
+            <remote-alias>Rides_by_day_of_week </remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Rides_by_day_of_week.csv_8ACB80B0A6084B8F8A3ED57B0D2EB629]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>member_casual</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[member_casual (Total_Rides.csv)]</local-name>
+            <parent-name>[Total_Rides.csv]</parent-name>
+            <remote-alias>member_casual</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LRU_RRU' />
+            <object-id>[Total_Rides.csv_606C3A1778134DD2B80823010E83F94E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total_Rides</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Total_Rides]</local-name>
+            <parent-name>[Total_Rides.csv]</parent-name>
+            <remote-alias>Total_Rides</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Total_Rides.csv_606C3A1778134DD2B80823010E83F94E]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column aggregation='Hour' datatype='datetime' name='[Avg_Ride_Length]' role='dimension' type='ordinal' />
+      <column datatype='datetime' name='[Avg_Ride_Length_By Day_Of_Week]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[Rides_by_day_of_week ]' role='dimension' type='quantitative' />
+      <column caption='Avg_Ride_Length.csv' datatype='table' name='[__tableau_internal_object_id__].[Avg_Ride_Length.csv_12A3622101DF4CC98E29B342E7D8A548]' role='measure' type='quantitative' />
+      <column caption='Avg_Ride_Length_By Day_Of_Week.csv' datatype='table' name='[__tableau_internal_object_id__].[Avg_Ride_Length_By Day_Of_Week.csv_FD7240B8F0DC4086A52D12BF9DD822D6]' role='measure' type='quantitative' />
+      <column caption='Rides_by_day_of_week.csv' datatype='table' name='[__tableau_internal_object_id__].[Rides_by_day_of_week.csv_8ACB80B0A6084B8F8A3ED57B0D2EB629]' role='measure' type='quantitative' />
+      <column caption='Total_Rides.csv' datatype='table' name='[__tableau_internal_object_id__].[Total_Rides.csv_606C3A1778134DD2B80823010E83F94E]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[day_of_week (Avg_Ride_Length_By Day_Of_Week.csv)]' role='dimension' type='quantitative' />
+      <column datatype='integer' name='[day_of_week]' role='dimension' type='quantitative' />
+      <column datatype='string' name='[member_casual (Avg_Ride_Length_By Day_Of_Week.csv)]' role='dimension' type='nominal' />
+      <column datatype='string' name='[member_casual (Rides_by_day_of_week.csv)]' role='dimension' type='nominal' />
+      <column-instance column='[day_of_week (Avg_Ride_Length_By Day_Of_Week.csv)]' derivation='None' name='[none:day_of_week (Avg_Ride_Length_By Day_Of_Week.csv):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[member_casual (Avg_Ride_Length_By Day_Of_Week.csv)]' derivation='None' name='[none:member_casual (Avg_Ride_Length_By Day_Of_Week.csv):nk]' pivot='key' type='nominal' />
+      <column-instance column='[member_casual (Rides_by_day_of_week.csv)]' derivation='None' name='[none:member_casual (Rides_by_day_of_week.csv):nk]' pivot='key' type='nominal' />
+      <column-instance column='[Avg_Ride_Length_By Day_Of_Week]' derivation='Second-Trunc' name='[tsc:Avg_Ride_Length_By Day_Of_Week:qk]' pivot='key' type='quantitative' />
+      <group hidden='true' name='[Exclusions (day_of_week (Avg_Ride_Length_By Day_Of_Week.csv),member_casual (Avg_Ride_Length_By Day_Of_Week.csv),SECOND(Avg_Ride_Length_By Day_Of_Week))]' name-style='unqualified' user:auto-column='exclude'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:day_of_week (Avg_Ride_Length_By Day_Of_Week.csv):qk]' />
+          <groupfilter function='level-members' level='[none:member_casual (Avg_Ride_Length_By Day_Of_Week.csv):nk]' />
+          <groupfilter function='level-members' level='[tsc:Avg_Ride_Length_By Day_Of_Week:qk]' />
+        </groupfilter>
+      </group>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/TEMP/TableauTemp/#TableauTemp_05t2cmf03tfksz1bh9bqb10x5nws.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='02/15/2026 05:20:57 PM' username='tableau_internal_user'>
+          <relation type='collection'>
+            <relation name='Avg_Ride_Length_By Day_Of_Week.csv_FD7240B8F0DC4086A52D12BF9DD822D6' table='[Extract].[Avg_Ride_Length_By Day_Of_Week.csv_FD7240B8F0DC4086A52D12BF9DD822D6]' type='table' />
+            <relation name='Avg_Ride_Length.csv_12A3622101DF4CC98E29B342E7D8A548' table='[Extract].[Avg_Ride_Length.csv_12A3622101DF4CC98E29B342E7D8A548]' type='table' />
+            <relation name='Rides_by_day_of_week.csv_8ACB80B0A6084B8F8A3ED57B0D2EB629' table='[Extract].[Rides_by_day_of_week.csv_8ACB80B0A6084B8F8A3ED57B0D2EB629]' type='table' />
+            <relation name='Total_Rides.csv_606C3A1778134DD2B80823010E83F94E' table='[Extract].[Total_Rides.csv_606C3A1778134DD2B80823010E83F94E]' type='table' />
+          </relation>
+          <cols>
+            <map key='[Avg_Ride_Length]' value='[Avg_Ride_Length.csv_12A3622101DF4CC98E29B342E7D8A548].[Avg_Ride_Length]' />
+            <map key='[Avg_Ride_Length_By Day_Of_Week]' value='[Avg_Ride_Length_By Day_Of_Week.csv_FD7240B8F0DC4086A52D12BF9DD822D6].[Avg_Ride_Length_By Day_Of_Week]' />
+            <map key='[Rides_by_day_of_week ]' value='[Rides_by_day_of_week.csv_8ACB80B0A6084B8F8A3ED57B0D2EB629].[Rides_by_day_of_week ]' />
+            <map key='[Total_Rides]' value='[Total_Rides.csv_606C3A1778134DD2B80823010E83F94E].[Total_Rides]' />
+            <map key='[day_of_week (Avg_Ride_Length_By Day_Of_Week.csv)]' value='[Avg_Ride_Length_By Day_Of_Week.csv_FD7240B8F0DC4086A52D12BF9DD822D6].[day_of_week]' />
+            <map key='[day_of_week]' value='[Rides_by_day_of_week.csv_8ACB80B0A6084B8F8A3ED57B0D2EB629].[day_of_week]' />
+            <map key='[member_casual (Avg_Ride_Length_By Day_Of_Week.csv)]' value='[Avg_Ride_Length_By Day_Of_Week.csv_FD7240B8F0DC4086A52D12BF9DD822D6].[member_casual]' />
+            <map key='[member_casual (Rides_by_day_of_week.csv)]' value='[Rides_by_day_of_week.csv_8ACB80B0A6084B8F8A3ED57B0D2EB629].[member_casual]' />
+            <map key='[member_casual (Total_Rides.csv)]' value='[Total_Rides.csv_606C3A1778134DD2B80823010E83F94E].[member_casual]' />
+            <map key='[member_casual]' value='[Avg_Ride_Length.csv_12A3622101DF4CC98E29B342E7D8A548].[member_casual]' />
+          </cols>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>day_of_week</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[day_of_week (Avg_Ride_Length_By Day_Of_Week.csv)]</local-name>
+              <parent-name>[Avg_Ride_Length_By Day_Of_Week.csv_FD7240B8F0DC4086A52D12BF9DD822D6]</parent-name>
+              <remote-alias>day_of_week</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Avg_Ride_Length_By Day_Of_Week.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Avg_Ride_Length_By Day_Of_Week.csv_FD7240B8F0DC4086A52D12BF9DD822D6]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>member_casual</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[member_casual (Avg_Ride_Length_By Day_Of_Week.csv)]</local-name>
+              <parent-name>[Avg_Ride_Length_By Day_Of_Week.csv_FD7240B8F0DC4086A52D12BF9DD822D6]</parent-name>
+              <remote-alias>member_casual</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Avg_Ride_Length_By Day_Of_Week.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LRU_RRU' />
+              <object-id>[Avg_Ride_Length_By Day_Of_Week.csv_FD7240B8F0DC4086A52D12BF9DD822D6]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Avg_Ride_Length_By Day_Of_Week</remote-name>
+              <remote-type>134</remote-type>
+              <local-name>[Avg_Ride_Length_By Day_Of_Week]</local-name>
+              <parent-name>[Avg_Ride_Length_By Day_Of_Week.csv_FD7240B8F0DC4086A52D12BF9DD822D6]</parent-name>
+              <remote-alias>Avg_Ride_Length_By Day_Of_Week</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Avg_Ride_Length_By Day_Of_Week.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Hour</aggregation>
+              <approx-count>14</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Avg_Ride_Length_By Day_Of_Week.csv_FD7240B8F0DC4086A52D12BF9DD822D6]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>member_casual</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[member_casual]</local-name>
+              <parent-name>[Avg_Ride_Length.csv_12A3622101DF4CC98E29B342E7D8A548]</parent-name>
+              <remote-alias>member_casual</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Avg_Ride_Length.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LRU_RRU' />
+              <object-id>[Avg_Ride_Length.csv_12A3622101DF4CC98E29B342E7D8A548]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Avg_Ride_Length</remote-name>
+              <remote-type>134</remote-type>
+              <local-name>[Avg_Ride_Length]</local-name>
+              <parent-name>[Avg_Ride_Length.csv_12A3622101DF4CC98E29B342E7D8A548]</parent-name>
+              <remote-alias>Avg_Ride_Length</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Avg_Ride_Length.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Hour</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Avg_Ride_Length.csv_12A3622101DF4CC98E29B342E7D8A548]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>member_casual</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[member_casual (Rides_by_day_of_week.csv)]</local-name>
+              <parent-name>[Rides_by_day_of_week.csv_8ACB80B0A6084B8F8A3ED57B0D2EB629]</parent-name>
+              <remote-alias>member_casual</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Rides_by_day_of_week.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LRU_RRU' />
+              <object-id>[Rides_by_day_of_week.csv_8ACB80B0A6084B8F8A3ED57B0D2EB629]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>day_of_week</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[day_of_week]</local-name>
+              <parent-name>[Rides_by_day_of_week.csv_8ACB80B0A6084B8F8A3ED57B0D2EB629]</parent-name>
+              <remote-alias>day_of_week</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Rides_by_day_of_week.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Rides_by_day_of_week.csv_8ACB80B0A6084B8F8A3ED57B0D2EB629]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Rides_by_day_of_week </remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Rides_by_day_of_week ]</local-name>
+              <parent-name>[Rides_by_day_of_week.csv_8ACB80B0A6084B8F8A3ED57B0D2EB629]</parent-name>
+              <remote-alias>Rides_by_day_of_week </remote-alias>
+              <ordinal>7</ordinal>
+              <family>Rides_by_day_of_week.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>14</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Rides_by_day_of_week.csv_8ACB80B0A6084B8F8A3ED57B0D2EB629]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>member_casual</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[member_casual (Total_Rides.csv)]</local-name>
+              <parent-name>[Total_Rides.csv_606C3A1778134DD2B80823010E83F94E]</parent-name>
+              <remote-alias>member_casual</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Total_Rides.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LRU_RRU' />
+              <object-id>[Total_Rides.csv_606C3A1778134DD2B80823010E83F94E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Total_Rides</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Total_Rides]</local-name>
+              <parent-name>[Total_Rides.csv_606C3A1778134DD2B80823010E83F94E]</parent-name>
+              <remote-alias>Total_Rides</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Total_Rides.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Total_Rides.csv_606C3A1778134DD2B80823010E83F94E]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:member_casual (Rides_by_day_of_week.csv):nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;member&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;casual&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:member_casual (Avg_Ride_Length_By Day_Of_Week.csv):nk]' type='palette'>
+            <map to='#59a14f'>
+              <bucket>&quot;member&quot;</bucket>
+            </map>
+            <map to='#8074a8'>
+              <bucket>&quot;casual&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Ukraine&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='Avg_Ride_Length.csv' id='Avg_Ride_Length.csv_12A3622101DF4CC98E29B342E7D8A548'>
+            <properties context=''>
+              <relation connection='textscan.02owquh0jhsoyp19b18180sfufkx' name='Avg_Ride_Length.csv' table='[Avg_Ride_Length#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='ru_RU' separator=';'>
+                  <column datatype='string' name='member_casual' ordinal='0' />
+                  <column datatype='datetime' name='Avg_Ride_Length' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Avg_Ride_Length.csv_12A3622101DF4CC98E29B342E7D8A548' table='[Extract].[Avg_Ride_Length.csv_12A3622101DF4CC98E29B342E7D8A548]' type='table' />
+            </properties>
+          </object>
+          <object caption='Avg_Ride_Length_By Day_Of_Week.csv' id='Avg_Ride_Length_By Day_Of_Week.csv_FD7240B8F0DC4086A52D12BF9DD822D6'>
+            <properties context=''>
+              <relation connection='textscan.02owquh0jhsoyp19b18180sfufkx' name='Avg_Ride_Length_By Day_Of_Week.csv' table='[Avg_Ride_Length_By Day_Of_Week#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='ru_RU' separator=';'>
+                  <column datatype='integer' name='day_of_week' ordinal='0' />
+                  <column datatype='string' name='member_casual' ordinal='1' />
+                  <column datatype='datetime' name='Avg_Ride_Length_By Day_Of_Week' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Avg_Ride_Length_By Day_Of_Week.csv_FD7240B8F0DC4086A52D12BF9DD822D6' table='[Extract].[Avg_Ride_Length_By Day_Of_Week.csv_FD7240B8F0DC4086A52D12BF9DD822D6]' type='table' />
+            </properties>
+          </object>
+          <object caption='Rides_by_day_of_week.csv' id='Rides_by_day_of_week.csv_8ACB80B0A6084B8F8A3ED57B0D2EB629'>
+            <properties context=''>
+              <relation connection='textscan.02owquh0jhsoyp19b18180sfufkx' name='Rides_by_day_of_week.csv' table='[Rides_by_day_of_week#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='ru_RU' separator=';'>
+                  <column datatype='string' name='member_casual' ordinal='0' />
+                  <column datatype='integer' name='day_of_week' ordinal='1' />
+                  <column datatype='integer' name='Rides_by_day_of_week ' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Rides_by_day_of_week.csv_8ACB80B0A6084B8F8A3ED57B0D2EB629' table='[Extract].[Rides_by_day_of_week.csv_8ACB80B0A6084B8F8A3ED57B0D2EB629]' type='table' />
+            </properties>
+          </object>
+          <object caption='Total_Rides.csv' id='Total_Rides.csv_606C3A1778134DD2B80823010E83F94E'>
+            <properties context=''>
+              <relation connection='textscan.02owquh0jhsoyp19b18180sfufkx' name='Total_Rides.csv' table='[Total_Rides#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='ru_RU' separator=';'>
+                  <column datatype='string' name='member_casual' ordinal='0' />
+                  <column datatype='integer' name='Total_Rides' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Total_Rides.csv_606C3A1778134DD2B80823010E83F94E' table='[Extract].[Total_Rides.csv_606C3A1778134DD2B80823010E83F94E]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[member_casual (Avg_Ride_Length_By Day_Of_Week.csv)]' />
+              <expression op='[member_casual]' />
+            </expression>
+            <first-end-point object-id='Avg_Ride_Length_By Day_Of_Week.csv_FD7240B8F0DC4086A52D12BF9DD822D6' />
+            <second-end-point object-id='Avg_Ride_Length.csv_12A3622101DF4CC98E29B342E7D8A548' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[member_casual]' />
+              <expression op='[member_casual (Rides_by_day_of_week.csv)]' />
+            </expression>
+            <first-end-point object-id='Avg_Ride_Length.csv_12A3622101DF4CC98E29B342E7D8A548' />
+            <second-end-point object-id='Rides_by_day_of_week.csv_8ACB80B0A6084B8F8A3ED57B0D2EB629' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[member_casual (Rides_by_day_of_week.csv)]' />
+              <expression op='[member_casual (Total_Rides.csv)]' />
+            </expression>
+            <first-end-point object-id='Rides_by_day_of_week.csv_8ACB80B0A6084B8F8A3ED57B0D2EB629' />
+            <second-end-point object-id='Total_Rides.csv_606C3A1778134DD2B80823010E83F94E' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000'>member vs casual</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Avg_Ride_Length+' name='federated.1ru33wq1s7b34t1alzmj50vrra8r' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ru33wq1s7b34t1alzmj50vrra8r'>
+            <column datatype='integer' name='[Total_Rides]' role='measure' type='quantitative' />
+            <column datatype='string' name='[member_casual (Total_Rides.csv)]' role='dimension' type='nominal' />
+            <column-instance column='[member_casual (Total_Rides.csv)]' derivation='None' name='[none:member_casual (Total_Rides.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Total_Rides]' derivation='Sum' name='[sum:Total_Rides:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#b07aa1' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ru33wq1s7b34t1alzmj50vrra8r].[none:member_casual (Total_Rides.csv):nk]</rows>
+        <cols>[federated.1ru33wq1s7b34t1alzmj50vrra8r].[sum:Total_Rides:qk]</cols>
+      </table>
+      <simple-id uuid='{0035BEED-3BEC-43BE-9CDB-A7896D21911C}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>rides VS day of week</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Avg_Ride_Length+' name='federated.1ru33wq1s7b34t1alzmj50vrra8r' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ru33wq1s7b34t1alzmj50vrra8r'>
+            <column datatype='integer' name='[Rides_by_day_of_week ]' role='dimension' type='quantitative' />
+            <column datatype='integer' name='[day_of_week]' role='dimension' type='quantitative' />
+            <column datatype='string' name='[member_casual (Rides_by_day_of_week.csv)]' role='dimension' type='nominal' />
+            <column-instance column='[Rides_by_day_of_week ]' derivation='None' name='[none:Rides_by_day_of_week :qk]' pivot='key' type='quantitative' />
+            <column-instance column='[day_of_week]' derivation='None' name='[none:day_of_week:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[member_casual (Rides_by_day_of_week.csv)]' derivation='None' name='[none:member_casual (Rides_by_day_of_week.csv):nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1ru33wq1s7b34t1alzmj50vrra8r].[none:member_casual (Rides_by_day_of_week.csv):nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='shape' value='asterisk' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ru33wq1s7b34t1alzmj50vrra8r].[none:Rides_by_day_of_week :qk]</rows>
+        <cols>[federated.1ru33wq1s7b34t1alzmj50vrra8r].[none:day_of_week:qk]</cols>
+      </table>
+      <simple-id uuid='{1BF99BCE-D214-422E-A9F1-BD17BF202C47}' />
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>Avg Ride Length</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Avg_Ride_Length+' name='federated.1ru33wq1s7b34t1alzmj50vrra8r' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ru33wq1s7b34t1alzmj50vrra8r'>
+            <column aggregation='Hour' datatype='datetime' name='[Avg_Ride_Length]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[member_casual]' role='dimension' type='nominal' />
+            <column-instance column='[Avg_Ride_Length]' derivation='None' name='[none:Avg_Ride_Length:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[member_casual]' derivation='None' name='[none:member_casual:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='auto-subtitle' class='0' field='[federated.1ru33wq1s7b34t1alzmj50vrra8r].[none:Avg_Ride_Length:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1ru33wq1s7b34t1alzmj50vrra8r].[none:Avg_Ride_Length:qk]' value='*00:00:00' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1ru33wq1s7b34t1alzmj50vrra8r].[none:Avg_Ride_Length:qk]' value='*' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-color' value='#d37295' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ru33wq1s7b34t1alzmj50vrra8r].[none:member_casual:nk]</rows>
+        <cols>[federated.1ru33wq1s7b34t1alzmj50vrra8r].[none:Avg_Ride_Length:qk]</cols>
+      </table>
+      <simple-id uuid='{1101A8A4-0379-437A-951C-00A7FFA19A70}' />
+    </worksheet>
+    <worksheet name='Sheet 4'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>avg rides length VS day of week</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Avg_Ride_Length+' name='federated.1ru33wq1s7b34t1alzmj50vrra8r' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ru33wq1s7b34t1alzmj50vrra8r'>
+            <column datatype='datetime' name='[Avg_Ride_Length_By Day_Of_Week]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[day_of_week (Avg_Ride_Length_By Day_Of_Week.csv)]' role='dimension' type='quantitative' />
+            <column datatype='string' name='[member_casual (Avg_Ride_Length_By Day_Of_Week.csv)]' role='dimension' type='nominal' />
+            <column-instance column='[day_of_week (Avg_Ride_Length_By Day_Of_Week.csv)]' derivation='None' name='[none:day_of_week (Avg_Ride_Length_By Day_Of_Week.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[member_casual (Avg_Ride_Length_By Day_Of_Week.csv)]' derivation='None' name='[none:member_casual (Avg_Ride_Length_By Day_Of_Week.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Avg_Ride_Length_By Day_Of_Week]' derivation='Second-Trunc' name='[tsc:Avg_Ride_Length_By Day_Of_Week:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1ru33wq1s7b34t1alzmj50vrra8r].[tsc:Avg_Ride_Length_By Day_Of_Week:qk]' value='' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1ru33wq1s7b34t1alzmj50vrra8r].[tsc:Avg_Ride_Length_By Day_Of_Week:qk]' value='' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.1ru33wq1s7b34t1alzmj50vrra8r].[none:member_casual (Avg_Ride_Length_By Day_Of_Week.csv):nk]' />
+              <text column='[federated.1ru33wq1s7b34t1alzmj50vrra8r].[none:member_casual (Avg_Ride_Length_By Day_Of_Week.csv):nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='shape' value=':filled/square' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ru33wq1s7b34t1alzmj50vrra8r].[tsc:Avg_Ride_Length_By Day_Of_Week:qk]</rows>
+        <cols>[federated.1ru33wq1s7b34t1alzmj50vrra8r].[none:day_of_week (Avg_Ride_Length_By Day_Of_Week.csv):qk]</cols>
+      </table>
+      <simple-id uuid='{7C094C8B-7D6E-4625-888D-B68CF72ECA4D}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Tableau Light'>Bike-Share Usage Trends and Behavioral Differences </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='860' maxwidth='1450' minheight='560' minwidth='420' sizing-mode='range' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98030' id='14' param='vert' type-v2='layout-flow' w='98896' x='552' y='985'>
+            <zone h='6034' id='15' type-v2='title' w='98896' x='552' y='985'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='91996' id='9' param='horz' type-v2='layout-flow' w='98896' x='552' y='7019'>
+              <zone h='91996' id='7' type-v2='layout-basic' w='98896' x='552' y='7019'>
+                <zone h='45997' id='3' name='Sheet 1' w='49435' x='552' y='7019'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='45997' id='5' name='Sheet 3' w='49461' x='49987' y='7019'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='45999' id='6' name='Sheet 2' w='49435' x='552' y='53016'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='45999' id='11' name='Sheet 4' w='49461' x='49987' y='53016'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Tableau Light'>Bike-Share Usage Trends and Behavioral Differences </run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='1250' minheight='1250' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='19' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98030' id='18' param='vert' type-v2='layout-flow' w='98896' x='552' y='985'>
+                <zone h='6034' id='15' type-v2='title' w='98896' x='552' y='985'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='45997' id='3' is-fixed='true' name='Sheet 1' w='49435' x='552' y='7019'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='45997' id='5' is-fixed='true' name='Sheet 3' w='49461' x='49987' y='7019'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='45999' id='6' is-fixed='true' name='Sheet 2' w='49435' x='552' y='53016'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='45999' id='11' is-fixed='true' name='Sheet 4' w='49461' x='49987' y='53016'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{7000C017-2A94-4EE0-8B10-6018E951C0EA}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1ru33wq1s7b34t1alzmj50vrra8r].[hr:Avg_Ride_Length_By Day_Of_Week:ok]</field>
+            <field>[federated.1ru33wq1s7b34t1alzmj50vrra8r].[none:day_of_week (Avg_Ride_Length_By Day_Of_Week.csv):qk]</field>
+            <field>[federated.1ru33wq1s7b34t1alzmj50vrra8r].[none:member_casual (Rides_by_day_of_week.csv):nk]</field>
+            <field>[federated.1ru33wq1s7b34t1alzmj50vrra8r].[none:member_casual (Total_Rides.csv):nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{F52B9857-A599-4669-98F5-75E533EE8199}' />
+    </window>
+    <window class='worksheet' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1ru33wq1s7b34t1alzmj50vrra8r].[hr:Avg_Ride_Length:ok]</field>
+            <field>[federated.1ru33wq1s7b34t1alzmj50vrra8r].[mi:Avg_Ride_Length:ok]</field>
+            <field>[federated.1ru33wq1s7b34t1alzmj50vrra8r].[none:member_casual:nk]</field>
+            <field>[federated.1ru33wq1s7b34t1alzmj50vrra8r].[tmi:Avg_Ride_Length:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{55646BA3-34B7-4507-979A-12FCF0D658E3}' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.1ru33wq1s7b34t1alzmj50vrra8r].[none:member_casual (Rides_by_day_of_week.csv):nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1ru33wq1s7b34t1alzmj50vrra8r].[hr:Avg_Ride_Length:ok]</field>
+            <field>[federated.1ru33wq1s7b34t1alzmj50vrra8r].[none:Rides_by_day_of_week :qk]</field>
+            <field>[federated.1ru33wq1s7b34t1alzmj50vrra8r].[none:day_of_week:qk]</field>
+            <field>[federated.1ru33wq1s7b34t1alzmj50vrra8r].[none:member_casual (Rides_by_day_of_week.csv):nk]</field>
+            <field>[federated.1ru33wq1s7b34t1alzmj50vrra8r].[none:member_casual:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{87474D57-CB21-4C2C-BA81-50D778CBF4CE}' />
+    </window>
+    <window class='worksheet' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1ru33wq1s7b34t1alzmj50vrra8r].[none:member_casual (Avg_Ride_Length_By Day_Of_Week.csv):nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1ru33wq1s7b34t1alzmj50vrra8r].[hr:Avg_Ride_Length_By Day_Of_Week:ok]</field>
+            <field>[federated.1ru33wq1s7b34t1alzmj50vrra8r].[mi:Avg_Ride_Length_By Day_Of_Week:ok]</field>
+            <field>[federated.1ru33wq1s7b34t1alzmj50vrra8r].[none:Rides_by_day_of_week :qk]</field>
+            <field>[federated.1ru33wq1s7b34t1alzmj50vrra8r].[none:day_of_week (Avg_Ride_Length_By Day_Of_Week.csv):qk]</field>
+            <field>[federated.1ru33wq1s7b34t1alzmj50vrra8r].[none:day_of_week:qk]</field>
+            <field>[federated.1ru33wq1s7b34t1alzmj50vrra8r].[none:member_casual (Avg_Ride_Length_By Day_Of_Week.csv):nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{2DC03407-612F-4ED3-B3F3-99AD9BE1F79D}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Sheet 1' />
+        <viewpoint name='Sheet 2'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 3' />
+        <viewpoint name='Sheet 4'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{F2DAADF0-C60C-4C5A-8A01-8AE7C15ABFF0}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      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
+      yf8BWlztMI5lBpEAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='127' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 2' width='192'>
+      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
+      AABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='127' name='Sheet 3' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 4' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
